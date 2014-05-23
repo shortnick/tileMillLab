@@ -1,0 +1,68 @@
+Map {
+  background-color: #b8dee6;
+ 
+}
+
+/*#httpmapboxgeodata {
+  line-color:#594;
+  line-width:0.5;
+  polygon-opacity:1;
+  polygon-fill:#000;
+}*/
+
+#countries {
+  line-color:#460202;
+  line-width:2;
+  polygon-opacity:.5;
+  polygon-fill:#594;
+  }
+
+
+#subunits {
+  line-color:#000;
+  line-width:0.5;
+  polygon-opacity:0;
+  polygon-fill:#000;
+}
+
+#cities2 {
+  ::marker ['ADM1NAME' = 'Washington'][zoom < 9] {
+    marker-width: 8;
+    marker-fill: #e27b2c;
+    marker-line-color:#460202;
+    marker-allow-overlap: true;
+    marker-line-width: .5;
+   } 
+   ::labels ['ADM1NAME' = 'Washington'][zoom < 11]{
+  text-name: "[NAME]";
+  text-face-name: "Arial Bold";
+  text-allow-overlap: true;
+  text-fill: #460202;
+  text-halo-fill: fadeout(#ce8, 30%);
+  text-halo-radius: 4;
+  text-size: 15;
+  text-dy: 5;
+  }
+  }
+
+#rail24k {
+  ::line, ::hatch { line-color: #5e0b0b; }
+  ::line { line-width:1; }
+  line-color:#460202; 
+  ::labels [zoom > 7][Shape_Leng >10000] {
+  text-name: [Name];
+  text-face-name: "Trebuchet MS Regular";
+  text-fill: #036;
+  text-size: 15;
+  text-placement: line;
+  text-dy: 10;
+  text-max-char-angle-delta: 25;
+    }
+    
+  ::hatch {
+    line-width: 4;
+    line-dasharray: 1, 24;
+      }
+  }
+  
+}
